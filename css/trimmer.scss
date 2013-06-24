@@ -1,0 +1,77 @@
+
+
+
+@mixin imageTrimmer($width) {
+    .trimmer-wrap{
+        @extend .clearFix;
+        @extend .disableTextSelect;
+        display: block;
+        position: relative;
+        width: $width;
+        background-color: #e0e0e0;
+        .img{
+            width: $width - 50px;
+            display: block;
+            position: relative;
+            float: left;
+            overflow: hidden;
+            .lb{
+                display: block;
+                position: absolute;
+                width: 5000px;
+                height: 5000px;
+                z-index: 500;
+                background-color: rgba(125,125,125,0.2);
+                
+            }
+            img{
+                width: $width - 50px;
+                z-index: 5;
+            }
+            .element{
+                display: block;
+                position: absolute;
+                //overflow: hidden;
+                z-index: 1000;
+                display: block;
+                min-height: 50px;
+                min-width: 50px;
+                background-color: rgba(0,255,0,0.5);
+                @include borderRadius(10px);
+                .ui-resizable-handle{
+                    z-index: 1500;
+                    background-color: red;
+                    position: absolute;
+                    &.ui-resizable-s{    
+                        width: 30px;
+                        height: 10px;
+                        bottom: 0;
+                        left: 50%;
+                        margin-left: -15px;
+                    }
+                    &.ui-resizable-e{
+                        width: 10px;
+                        height: 30px;
+                        right: 0;
+                        top: 50%;
+                        margin-top: -15px;
+                    }
+                }
+            }
+        }    
+        .menu{
+            display: block;
+            width: 50px;
+            float: right;
+            ul{
+                width: 45px;
+                margin: auto;
+                padding-top: 5px; 
+            }
+        }
+    }
+}
+
+
+
+@include imageTrimmer(500px);

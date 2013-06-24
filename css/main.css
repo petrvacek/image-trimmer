@@ -1,0 +1,157 @@
+/**
+ * Eric Meyer's Reset CSS v2.0 (http://meyerweb.com/eric/tools/css/reset/)
+ * http://cssreset.com
+ */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.clearFix, .trimmer-wrap {
+  zoom: 1;
+}
+.clearFix:after, .trimmer-wrap:after {
+  content: ".";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+  font-size: 0;
+}
+
+                    /*
+.inline-block() {
+    display: inline-block;
+  *display: inline; /* IE7 inline-block hack */
+                                               /*
+  *zoom: 1;
+}*/
+.disableTextSelect, .trimmer-wrap {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.enableTextSelect {
+  -webkit-touch-callout: text;
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
+
+.trimmer-wrap {
+  display: block;
+  position: relative;
+  width: 500px;
+  background-color: #e0e0e0;
+}
+.trimmer-wrap .img {
+  width: 450px;
+  display: block;
+  position: relative;
+  float: left;
+  overflow: hidden;
+}
+.trimmer-wrap .img .lb {
+  display: block;
+  position: absolute;
+  width: 5000px;
+  height: 5000px;
+  z-index: 500;
+  background-color: rgba(125, 125, 125, 0.2);
+}
+.trimmer-wrap .img img {
+  width: 450px;
+  z-index: 5;
+}
+.trimmer-wrap .img .element {
+  display: block;
+  position: absolute;
+  z-index: 1000;
+  display: block;
+  min-height: 50px;
+  min-width: 50px;
+  background-color: rgba(0, 255, 0, 0.5);
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+}
+.trimmer-wrap .img .element .ui-resizable-handle {
+  z-index: 1500;
+  background-color: red;
+  position: absolute;
+}
+.trimmer-wrap .img .element .ui-resizable-handle.ui-resizable-s {
+  width: 30px;
+  height: 10px;
+  bottom: 0;
+  left: 50%;
+  margin-left: -15px;
+}
+.trimmer-wrap .img .element .ui-resizable-handle.ui-resizable-e {
+  width: 10px;
+  height: 30px;
+  right: 0;
+  top: 50%;
+  margin-top: -15px;
+}
+.trimmer-wrap .menu {
+  display: block;
+  width: 50px;
+  float: right;
+}
+.trimmer-wrap .menu ul {
+  width: 45px;
+  margin: auto;
+  padding-top: 5px;
+}

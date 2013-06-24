@@ -1,0 +1,42 @@
+
+.clearFix{
+  zoom: 1;
+  
+  &:after{
+    content: ".";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+}
+/*
+.inline-block() {
+    display: inline-block;
+  *display: inline; /* IE7 inline-block hack *//*
+  *zoom: 1;
+}*/
+
+.disableTextSelect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+.enableTextSelect {
+    -webkit-touch-callout: text;
+    -webkit-user-select: text;
+    -khtml-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+@mixin borderRadius($radius){
+  -moz-border-radius: $radius; // FF 1+
+  -webkit-border-radius: $radius; // FF 1+
+  border-radius: $radius; // Opera 10.5, IE 9, Saf5, Chrome
+}
